@@ -1,7 +1,7 @@
 # 🌐 Paradigm Employee Onboarding — Run & Deploy
 
 <div align="center">
-  <img width="1000" alt="Paradigm Onboarding Banner" src="https://paradigmfms.com/wp-content/uploads/2022/11/Paradigm-Logo-3-1024x157.png" />
+  <img width="1000" alt="Paradigm Onboarding Banner" src="http://paradigmfms.com/wp-content/uploads/2022/11/Paradigm-Logo-3-1024x157.png" />
 </div>
 
 Welcome to the **Paradigm Employee Onboarding Platform** 🚀  
