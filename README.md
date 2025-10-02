@@ -56,7 +56,7 @@ This app streamlines employee onboarding, document management, and integrations 
    
 Visit 👉 http://localhost:5173
 
-🔐 Firebase Setup
+5.**Firebase Setup**
 
 Go to Firebase Console
 
@@ -64,17 +64,17 @@ Authentication → Sign-in method → enable Email/Password and Google Sign-in
 
 Authentication → Authorized domains → add:
 
-localhost
+6.**localhost**
 
 your deployment domain (Netlify/Vercel/Firebase Hosting)
 
 Copy your Firebase config into .env.local as shown above.
 
-📦 Push to GitHub
+7.**Push to GitHub**
 
 Make sure .gitignore includes node_modules/ and .env.local.
 
-   ```bash
+```bash
   .gitignore (recommended)
    node_modules/
    dist/
@@ -82,10 +82,11 @@ Make sure .gitignore includes node_modules/ and .env.local.
   .env
   .vscode/
   .DS_Store
-  npm-debug.log*
-Commands to push
+  npm-debug.log
 
-  ```bash
+8.**Commands to push**
+
+   ```bash
   git init
   git add .
   git commit -m "Initial commit"
@@ -93,13 +94,13 @@ Commands to push
   git branch -M main
   git push -u origin main
 
-🛠️ Build & Deploy
+9.**🛠️ Build & Deploy**
   ```bash
   Build for production
   npm run build
 
-Preview locally
-  ```bash
+10.**Preview locally**
+   ```bash
   npm run preview
 
 Deployment options
