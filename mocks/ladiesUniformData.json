@@ -1,0 +1,23 @@
+
+{
+    "pants": [
+        { "id": "lp_28_sf", "size": "28", "length": 38, "waist": 28, "hip": 36, "fit": "Slim Fit" },
+        { "id": "lp_28_rf", "size": "28", "length": 38, "waist": 28, "hip": 37, "fit": "Regular Fit" },
+        { "id": "lp_30_sf", "size": "30", "length": 39, "waist": 30, "hip": 38, "fit": "Slim Fit" },
+        { "id": "lp_30_rf", "size": "30", "length": 39, "waist": 30, "hip": 39, "fit": "Regular Fit" },
+        { "id": "lp_30_cf", "size": "30", "length": 39, "waist": 30, "hip": 40, "fit": "Comfort Fit" },
+        { "id": "lp_32_sf", "size": "32", "length": 40, "waist": 32, "hip": 40, "fit": "Slim Fit" },
+        { "id": "lp_32_rf", "size": "32", "length": 40, "waist": 32, "hip": 41, "fit": "Regular Fit" },
+        { "id": "lp_32_cf", "size": "32", "length": 40, "waist": 32, "hip": 42, "fit": "Comfort Fit" }
+    ],
+    "shirts": [
+        { "id": "ls_s_sf", "size": "S", "length": 25, "sleeves": 8, "bust": 34, "shoulder": 15, "fit": "Slim Fit" },
+        { "id": "ls_s_rf", "size": "S", "length": 25, "sleeves": 8, "bust": 35, "shoulder": 15.5, "fit": "Regular Fit" },
+        { "id": "ls_m_sf", "size": "M", "length": 26, "sleeves": 8.5, "bust": 36, "shoulder": 16, "fit": "Slim Fit" },
+        { "id": "ls_m_rf", "size": "M", "length": 26, "sleeves": 8.5, "bust": 37, "shoulder": 16.5, "fit": "Regular Fit" },
+        { "id": "ls_m_cf", "size": "M", "length": 26, "sleeves": 8.5, "bust": 38, "shoulder": 16.5, "fit": "Comfort Fit" },
+        { "id": "ls_l_sf", "size": "L", "length": 27, "sleeves": 9, "bust": 38, "shoulder": 17, "fit": "Slim Fit" },
+        { "id": "ls_l_rf", "size": "L", "length": 27, "sleeves": 9, "bust": 39, "shoulder": 17.5, "fit": "Regular Fit" },
+        { "id": "ls_l_cf", "size": "L", "length": 27, "sleeves": 9, "bust": 40, "shoulder": 17.5, "fit": "Comfort Fit" }
+    ]
+}

@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paradigm Employee Onboarding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#005D22',
+            'accent-dark': '#004218',
+            page: '#F9FAFB',
+            card: '#FFFFFF',
+            muted: '#6B7280',
+            'primary-text': '#0F172A',
+            border: '#E6EEF3',
+            'accent-light': 'rgba(0, 93, 34, 0.1)',
+          },
+          boxShadow: {
+            card: '0 6px 18px rgba(15,23,42,0.06)',
+          },
+          borderRadius: {
+            xl: '1rem',
+            '2xl': '1.5rem',
+          },
+          fontFamily: {
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://aistudiocdn.com/react-date-range@^2.0.1/dist/styles.css" />
+    <link rel="stylesheet" type="text/css" href="https://aistudiocdn.com/react-date-range@^2.0.1/dist/theme/default.css" />
+    <style>
+    /* Custom Stepper Styles */
+    .stepIndicator {
+      transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1), background-color 0.2s ease, border-color 0.2s ease;
+      will-change: transform;
+    }
+
+    .stepIndicatorActive {
+      animation: scale-in 0.28s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+    }
+
+    @keyframes scale-in {
+      0% { transform: scale(0.85); }
+      70% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .stepIcon {
+      transition: opacity 0.22s ease, transform 0.22s ease;
+      will-change: opacity, transform;
+    }
+
+    .stepIconAnimate {
+      animation: fade-slide-in 0.22s ease forwards;
+    }
+
+    @keyframes fade-slide-in {
+      0% {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .shake {
+        animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+    }
+
+    @keyframes shake {
+      10%, 90% { transform: translate3d(-1px, 0, 0); }
+      20%, 80% { transform: translate3d(2px, 0, 0); }
+      30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+      40%, 60% { transform: translate3d(4px, 0, 0); }
+    }
+    
+    .splash-logo {
+      animation: splash-logo-pop-up 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+
+    @keyframes splash-logo-pop-up {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      70% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fade-in-scale {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .animate-fade-in-scale {
+      animation: fade-in-scale 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+
+    @keyframes pulse-bg {
+      0%, 100% {
+        background-color: rgba(0, 93, 34, 0.05);
+      }
+      50% {
+        background-color: rgba(0, 93, 34, 0.15);
+      }
+    }
+
+    .animate-pulse-bg {
+      animation: pulse-bg 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    /* HIDE SCROLLBAR BUT KEEP FUNCTIONALITY */
+    /* For Firefox */
+    html {
+      scrollbar-width: none;
+    }
+
+    /* For Chrome, Safari, and Opera */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+
+    /* FIX: Ensure full page background color and prevent black bars on scroll */
+    html, body, #root {
+      min-height: 100vh;
+      background-color: #F9FAFB; /* Corresponds to 'bg-page' */
+    }
+    
+    .form-input {
+      background-color: #FFFFFF; /* bg-card */
+      border: 1px solid #E6EEF3; /* border-border */
+      border-radius: 0.5rem; /* rounded-lg */
+      padding: 1rem 1rem; /* py-4 px-4 for larger mobile touch */
+      width: 100%;
+      font-size: 0.875rem; /* sm:text-sm */
+      color: #0F172A; /* text-primary-text */
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .form-input:focus {
+        outline: none;
+        border-color: #005D22; /* border-accent */
+        box-shadow: 0 0 0 1px #005D22; /* focus:ring-1 focus:ring-accent */
+    }
+    .form-input::placeholder {
+        color: #6B7280; /* text-muted */
+    }
+
+    .form-input--error {
+        border-color: #EF4444 !important; /* border-red-500 */
+    }
+    .form-input--error:focus {
+        border-color: #EF4444 !important;
+        box-shadow: 0 0 0 1px #EF4444 !important;
+    }
+    
+    .form-header-title {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 0.5rem;
+    }
+    .form-header-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40%;
+        height: 3px;
+        background-color: #005D22; /* accent */
+        border-radius: 999px;
+    }
+
+    /* Animation for fixing UI glitch */
+    @keyframes fade-in-down {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fade-in-down {
+        animation: fade-in-down 0.2s ease-out forwards;
+    }
+    
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body, .printable-area {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        background-color: white !important;
+      }
+      .page-break {
+        page-break-after: always;
+      }
+      .pdf-page {
+        width: 210mm;
+        min-height: 297mm;
+        height: auto;
+        padding: 1cm;
+        box-sizing: border-box;
+      }
+    }
+
+    /* Field Officer Dark Theme */
+    .field-officer-dark-theme {
+        background-color: #0f1f0f !important;
+        color: #e5e7eb;
+    }
+    body.field-officer-dark-theme,
+    body.field-officer-dark-theme #root,
+    body.field-officer-dark-theme .bg-page,
+    body.field-officer-dark-theme .bg-card {
+        background-color: #0f1f0f !important;
+        color: #e5e7eb;
+    }
+    .field-officer-dark-theme .text-primary-text {
+        color: #ffffff;
+    }
+    .field-officer-dark-theme .text-muted {
+        color: #9ca89c;
+    }
+    .field-officer-dark-theme .border-border {
+        border-color: #374151;
+    }
+    .field-officer-dark-theme .fo-mobile-header h1 {
+        font-size: 18px;
+        font-weight: 600; /* semibold */
+        color: #ffffff;
+    }
+    .field-officer-dark-theme .fo-input,
+    .field-officer-dark-theme .fo-select {
+        background-color: #243524;
+        border: 1px solid #374151;
+        color: #e5e7eb;
+        border-radius: 8px;
+        padding: 12px 14px;
+        width: 100%;
+        font-size: 15px;
+    }
+    .field-officer-dark-theme .fo-input::placeholder {
+        color: #9ca89c;
+    }
+    .field-officer-dark-theme .fo-input:focus,
+    .field-officer-dark-theme .fo-select:focus {
+        outline: none;
+        border-color: #32cd32;
+        box-shadow: 0 0 0 1px #32cd32;
+    }
+    .field-officer-dark-theme .fo-input--error,
+    .field-officer-dark-theme .fo-select--error {
+        border-color: #ef4444 !important; /* red-500 */
+    }
+    .field-officer-dark-theme .fo-input--error:focus,
+    .field-officer-dark-theme .fo-select--error:focus {
+        border-color: #ef4444 !important;
+        box-shadow: 0 0 0 1px #ef4444 !important;
+    }
+    .field-officer-dark-theme .fo-btn-primary {
+        background-color: #32cd32;
+        color: #0d1a0d;
+        font-weight: 700;
+        font-size: 14px;
+        border-radius: 9999px;
+        padding: 8px 16px;
+        text-transform: capitalize;
+    }
+     .field-officer-dark-theme .fo-btn-secondary {
+        background-color: transparent;
+        color: #e5e7eb;
+        border: 1px solid #374151;
+        border-radius: 9999px;
+        padding: 12px 24px;
+    }
+    .field-officer-dark-theme .fo-btn-danger,
+    .field-officer-dark-theme .fo-btn-outline {
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 9999px;
+        padding: 8px 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .field-officer-dark-theme .fo-btn-danger {
+        background-color: #ef4444; /* red-500 */
+        color: #ffffff;
+    }
+    .field-officer-dark-theme .fo-btn-outline {
+        background-color: transparent;
+        color: #e5e7eb;
+        border: 1px solid #32cd32;
+    }
+    .field-officer-dark-theme .fo-btn-add-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid #374151; /* Muted border */
+        border-radius: 9999px; /* Pill shape */
+        background-color: transparent;
+        color: #9ca89c; /* Muted text */
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }
+    .field-officer-dark-theme .fo-btn-add-item:hover {
+        border-color: #a7f3d0; /* Lighter green on hover */
+        color: #e5e7eb; /* White text on hover */
+        background-color: #243524;
+    }
+    .field-officer-dark-theme .fo-section-title {
+        color: #a7f3d0;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 0.25rem;
+    }
+    .field-officer-dark-theme .fo-section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40%;
+        height: 2px;
+        background-color: #32cd32;
+        border-radius: 999px;
+    }
+    .field-officer-dark-theme .fo-upload-box {
+      border: 2px dashed #34d399;
+      background-color: #243524;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      text-align: center;
+    }
+    .field-officer-dark-theme .fo-tab {
+      padding: 0.5rem 1rem;
+      color: #9ca89c;
+      border-bottom: 2px solid transparent;
+    }
+    .field-officer-dark-theme .fo-tab-active {
+      color: #ffffff;
+      border-bottom-color: #32cd32;
+      font-weight: 600;
+    }
+    .field-officer-dark-theme .fo-select-arrow {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca89c' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 0.5rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+        padding-right: 2.5rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    /* Mobile Nav Bar v2 for Field Officer */
+    .field-officer-dark-theme .mobile-nav {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      height: 60px;
+      background-color: #243524;
+      border-radius: 9999px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      z-index: 40;
+      padding: 0 0.5rem;
+    }
+
+    .field-officer-dark-theme .mobile-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #9ca89c;
+      font-size: 0.75rem;
+      gap: 0.125rem;
+      flex: 1;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .field-officer-dark-theme .mobile-nav-item.active {
+      color: #32cd32;
+      font-weight: 600;
+      transform: translateY(-2px);
+    }
+    
+    .field-officer-dark-theme .mobile-nav-item.active::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #32cd32;
+        animation: pop-in 0.2s ease-out forwards;
+    }
+    
+    .field-officer-dark-theme .mobile-nav-home-btn {
+      width: 64px;
+      height: 64px;
+      background-color: #32cd32;
+      color: #0d1a0d;
+      border-radius: 50%;
+      transform: translateY(-20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(50, 205, 50, 0.4);
+      border: 4px solid #0f1f0f;
+      transition: transform 0.2s ease-out;
+    }
+    
+    .field-officer-dark-theme .mobile-nav-home-btn.active {
+      transform: translateY(-20px) scale(1.1);
+    }
+    
+    @keyframes pop-in {
+      0% { transform: translateX(-50%) scale(0); }
+      100% { transform: translateX(-50%) scale(1); }
+    }
+
+    .field-officer-dark-theme .fo-home-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      display: flex;
+      justify-content: flex-end;
+      z-index: 10;
+    }
+
+    .field-officer-dark-theme .fo-home-profile-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+    .field-officer-dark-theme .fo-home-profile-icon img,
+    .field-officer-dark-theme .fo-home-profile-icon svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .field-officer-dark-theme .fo-attendance-card {
+        background-color: #243524;
+        border: 1px solid #374151;
+        border-radius: 12px;
+        padding: 1rem;
+    }
+    .field-officer-dark-theme .fo-attendance-time {
+        font-size: 0.875rem; /* 14px */
+        color: #9ca89c; /* text-muted */
+    }
+    .field-officer-dark-theme .fo-attendance-time strong {
+        color: #e5e7eb; /* default text color */
+        font-weight: 600;
+    }
+    .field-officer-dark-theme .fo-slider {
+        position: relative;
+        width: 100%;
+        height: 56px;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        cursor: grab;
+        user-select: none;
+        -webkit-user-select: none; /* For Safari */
+        transition: background-color 0.3s ease;
+    }
+    .field-officer-dark-theme .fo-slider:active {
+        cursor: grabbing;
+    }
+    .field-officer-dark-theme .fo-slider-thumb {
+        position: absolute;
+        top: 4px;
+        width: 48px;
+        height: 48px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        /* `transform` will be set by JS */
+    }
+    .field-officer-dark-theme .fo-slider-text {
+        font-weight: 600;
+        z-index: 5;
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+    }
+    .field-officer-dark-theme .fo-slider--checkin {
+        background-color: #243524;
+        border: 1px solid #32cd32;
+    }
+    .field-officer-dark-theme .fo-slider--checkin .fo-slider-text {
+        color: #32cd32;
+    }
+    .field-officer-dark-theme .fo-slider--checkin .fo-slider-thumb {
+        left: 4px;
+    }
+    .field-officer-dark-theme .fo-slider--checkin .fo-slider-thumb svg {
+        color: #32cd32;
+    }
+    .field-officer-dark-theme .fo-slider--checkin.success {
+        background-color: #32cd32;
+    }
+    .field-officer-dark-theme .fo-slider--checkin.success .fo-slider-text {
+        color: #0d1a0d;
+    }
+    .field-officer-dark-theme .fo-slider--checkout {
+        background-color: #243524;
+        border: 1px solid #ef4444;
+    }
+    .field-officer-dark-theme .fo-slider--checkout .fo-slider-text {
+        color: #ef4444;
+    }
+    .field-officer-dark-theme .fo-slider--checkout .fo-slider-thumb {
+        right: 4px;
+    }
+    .field-officer-dark-theme .fo-slider--checkout .fo-slider-thumb svg {
+        color: #ef4444;
+    }
+    .field-officer-dark-theme .fo-slider--checkout.success {
+        background-color: #ef4444;
+    }
+    .field-officer-dark-theme .fo-slider--checkout.success .fo-slider-text {
+        color: #ffffff;
+    }
+    .field-officer-dark-theme .fo-search-input {
+        background-color: #243524;
+        border: 1px solid #374151;
+        color: #e5e7eb;
+        border-radius: 12px;
+        padding: 10px 16px 10px 40px;
+        width: 100%;
+        font-size: 15px;
+    }
+    .field-officer-dark-theme .fo-filter-pills {
+        display: flex;
+        gap: 0.5rem;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    .field-officer-dark-theme .fo-filter-pill {
+        background-color: #243524;
+        color: #9ca89c;
+        border: 1px solid #374151;
+        border-radius: 9999px;
+        padding: 6px 16px;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+    }
+    .field-officer-dark-theme .fo-filter-pill.active {
+        background-color: #32cd32;
+        color: #0d1a0d;
+        font-weight: 600;
+        border-color: #32cd32;
+    }
+    .field-officer-dark-theme .fo-submission-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.75rem 0.25rem;
+        border-bottom: 1px solid #374151;
+    }
+    .field-officer-dark-theme .fo-submission-item:last-child {
+        border-bottom: none;
+    }
+    .field-officer-dark-theme .fo-submission-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    /* New styles for Tasks page */
+    .field-officer-dark-theme .fo-task-card {
+        background-color: #243524;
+        border: 1px solid #374151;
+        border-radius: 12px;
+        padding: 1rem;
+    }
+    .field-officer-dark-theme .fo-task-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+    }
+    .field-officer-dark-theme .fo-task-title {
+        font-weight: 600;
+        color: #e5e7eb;
+    }
+    .field-officer-dark-theme .fo-task-meta {
+        font-size: 0.75rem;
+        color: #9ca89c;
+    }
+     .field-officer-dark-theme .fo-status-badge {
+        padding: 0.125rem 0.5rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        display: inline-block;
+    }
+    .field-officer-dark-theme .fo-notification-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 1rem;
+        border-bottom: 1px solid #374151;
+    }
+    .field-officer-dark-theme .fo-tabs-container {
+        display: flex;
+        background-color: #243524;
+        border-radius: 8px;
+        padding: 4px;
+        border: 1px solid #374151;
+    }
+    .field-officer-dark-theme .fo-tab-button {
+        flex: 1;
+        padding: 8px 12px;
+        font-weight: 500;
+        color: #9ca89c;
+        border-radius: 6px;
+        transition: all 0.2s ease-in-out;
+    }
+    .field-officer-dark-theme .fo-tab-button.active {
+        background-color: #374151;
+        color: #ffffff;
+        font-weight: 600;
+    }
+    .auth-separator {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #d1d5db; /* gray-300 */
+        font-size: 0.875rem;
+    }
+    .auth-separator::before,
+    .auth-separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #4b5563; /* gray-600 */
+    }
+    .auth-separator:not(:empty)::before {
+        margin-right: .5em;
+    }
+    .auth-separator:not(:empty)::after {
+        margin-left: .5em;
+    }
+    .google-signin-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        background-color: #ffffff;
+        color: #1f2937; /* gray-800 */
+        font-weight: 600;
+        border: 1px solid #d1d5db; /* gray-300 */
+        border-radius: 9999px; /* rounded-full */
+        transition: background-color 0.2s ease;
+        font-size: 1rem; /* lg */
+    }
+    .google-signin-btn:hover {
+        background-color: #f3f4f6; /* gray-100 */
+    }
+    .google-signin-btn svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-right: 0.75rem;
+    }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.544.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.1",
+    "zustand/": "https://aistudiocdn.com/zustand@^5.0.8/",
+    "zustand": "https://aistudiocdn.com/zustand@^5.0.8",
+    "@hookform/resolvers/": "https://aistudiocdn.com/@hookform/resolvers@^5.2.2/",
+    "react-hook-form": "https://aistudiocdn.com/react-hook-form@^7.62.0",
+    "yup": "https://aistudiocdn.com/yup@^1.7.0",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "html2pdf.js": "https://aistudiocdn.com/html2pdf.js@^0.12.0",
+    "react-date-range": "https://aistudiocdn.com/react-date-range@^2.0.1",
+    "date-fns/": "https://aistudiocdn.com/date-fns@^3.6.0/",
+    "date-fns": "https://aistudiocdn.com/date-fns@^4.1.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^0.15.0",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js",
+    "firebase/auth": "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.3.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-page text-primary-text">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

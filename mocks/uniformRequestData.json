@@ -1,0 +1,27 @@
+[
+  {
+    "id": "urq_1",
+    "siteId": "SITE-TATA",
+    "siteName": "TATA SHERWOOD",
+    "gender": "Gents",
+    "requestedDate": "2024-07-28T10:00:00.000Z",
+    "status": "Issued",
+    "items": [
+      { "sizeId": "gp_32_rf", "sizeLabel": "32", "fit": "Regular Fit", "category": "Pants", "quantity": 10 },
+      { "sizeId": "gp_34_rf", "sizeLabel": "34", "fit": "Regular Fit", "category": "Pants", "quantity": 15 },
+      { "sizeId": "gs_l_rf", "sizeLabel": "L", "fit": "Regular Fit", "category": "Shirts", "quantity": 25 }
+    ]
+  },
+  {
+    "id": "urq_2",
+    "siteId": "SITE-NIKOO",
+    "siteName": "NIKOO HOMES",
+    "gender": "Ladies",
+    "requestedDate": "2024-07-25T14:30:00.000Z",
+    "status": "Pending",
+    "items": [
+      { "sizeId": "lp_30_rf", "sizeLabel": "30", "fit": "Regular Fit", "category": "Pants", "quantity": 20 },
+      { "sizeId": "ls_m_rf", "sizeLabel": "M", "fit": "Regular Fit", "category": "Shirts", "quantity": 20 }
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+
+[
+  {
+    "id": "pol_1",
+    "name": "POSH",
+    "description": "Prevention of Sexual Harassment Policy"
+  },
+  {
+    "id": "pol_2",
+    "name": "Uniform",
+    "description": "Company Uniform and Dress Code Policy"
+  },
+  {
+    "id": "pol_3",
+    "name": "Leaves",
+    "description": "Leave and Time-Off Policy"
+  },
+  {
+    "id": "pol_4",
+    "name": "Insurance",
+    "description": "Employee Insurance Benefits Policy"
+  },
+  {
+    "id": "pol_5",
+    "name": "Relieving",
+    "description": "Employee Offboarding and Relieving Policy"
+  }
+]

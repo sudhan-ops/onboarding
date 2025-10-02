@@ -1,0 +1,252 @@
+
+{
+  "submissions": [
+    {
+      "id": "sub_1678886400000",
+      "status": "verified",
+      "portalSyncStatus": "synced",
+      "organizationId": "SITE-AISSHWARYA",
+      "organizationName": "AISSHWARYA EXCELLENCY",
+      "enrollmentDate": "2024-05-15",
+      "personal": {
+        "employeeId": "PARA-001",
+        "firstName": "John",
+        "lastName": "Doe",
+        "preferredName": "John",
+        "dob": "1990-01-15",
+        "gender": "Male",
+        "maritalStatus": "Married",
+        "bloodGroup": "O+",
+        "mobile": "9876543210",
+        "alternateMobile": "9876543219",
+        "email": "john.doe@example.com",
+        "idProofType": "Aadhaar",
+        "idProofNumber": "111122223333",
+        "emergencyContactName": "Jane Doe",
+        "emergencyContactNumber": "9876543211",
+        "relationship": "Spouse",
+        "salary": 50000,
+        "verifiedStatus": { "name": true, "dob": true, "idProofNumber": true }
+      },
+      "address": {
+        "present": { "line1": "123 Maple St", "city": "Springfield", "state": "Illinois", "country": "USA", "pincode": "62704" },
+        "permanent": { "line1": "123 Maple St", "city": "Springfield", "state": "Illinois", "country": "USA", "pincode": "62704" },
+        "sameAsPresent": true
+      },
+      "family": [{ "id": "fam_1", "relation": "Spouse", "name": "Jane Doe", "dob": "1992-05-20", "occupation": "Designer", "dependent": true }],
+      "education": [{ "id": "edu_1", "degree": "B.Sc. Computer Science", "institution": "State University", "startYear": "2008", "endYear": "2012", "percentage": 85, "grade": "A" }],
+      "bank": {
+        "accountHolderName": "John Doe",
+        "accountNumber": "1234567890",
+        "confirmAccountNumber": "1234567890",
+        "ifscCode": "ABCD0123456",
+        "bankName": "First National Bank",
+        "branchName": "Main Branch",
+        "verifiedStatus": { "accountHolderName": true, "accountNumber": true, "ifscCode": true }
+      },
+      "uan": { "hasPreviousPf": true, "uanNumber": "100123456789", "pfNumber": "MH/12345/6789", "verifiedStatus": { "uanNumber": true } },
+      "esi": { "hasEsi": false, "verifiedStatus": {} },
+      "gmc": { "isOptedIn": true, "selectedSpouseId": "fam_1", "selectedChildIds": [] },
+      "organization": {
+        "designation": "Software Engineer",
+        "department": "Technology",
+        "reportingManager": "Devon Loper",
+        "organizationId": "SITE-AISSHWARYA",
+        "organizationName": "AISSHWARYA EXCELLENCY",
+        "joiningDate": "2024-05-15",
+        "workType": "Full-time"
+      },
+      "uniforms": [],
+      "biometrics": {
+        "signatureImage": null,
+        "fingerprints": { "leftHand": null, "rightHand": null }
+      }
+    },
+    {
+      "id": "sub_1678886500000",
+      "status": "pending",
+      "portalSyncStatus": null,
+      "organizationId": "ORG-FIN",
+      "organizationName": "ADVAITHA AKSHA",
+      "enrollmentDate": "2024-06-01",
+      "personal": {
+        "employeeId": "PARA-002",
+        "firstName": "Alice",
+        "lastName": "Smith",
+        "dob": "1995-08-22",
+        "gender": "Female",
+        "maritalStatus": "Single",
+        "bloodGroup": "A+",
+        "mobile": "9876543211",
+        "email": "alice.smith@example.com",
+        "emergencyContactName": "Robert Smith",
+        "emergencyContactNumber": "9876543213",
+        "relationship": "Father",
+        "salary": 25000,
+        "verifiedStatus": { "name": true, "dob": true, "idProofNumber": true }
+      },
+      "address": {
+        "present": { "line1": "456 Oak Ave", "city": "Metropolis", "state": "New York", "country": "USA", "pincode": "10001" },
+        "permanent": { "line1": "789 Pine Ln", "city": "Gotham", "state": "New Jersey", "country": "USA", "pincode": "07002" },
+        "sameAsPresent": false
+      },
+       "family": [],
+       "education": [{ "id": "edu_2", "degree": "M.A. English", "institution": "Ivy League College", "startYear": "2015", "endYear": "2017", "grade": "A+" }],
+       "bank": {
+        "accountHolderName": "Alice Smith",
+        "accountNumber": "0987654321",
+        "confirmAccountNumber": "0987654321",
+        "ifscCode": "WXYZ0987654",
+        "bankName": "Metropolis Bank",
+        "branchName": "Downtown",
+        "verifiedStatus": { "accountHolderName": false, "accountNumber": false, "ifscCode": false }
+      },
+       "uan": { "hasPreviousPf": false, "verifiedStatus": {} },
+       "esi": { "hasEsi": true, "esiNumber": "2001234567", "esiRegistrationDate": "2024-06-01", "esicBranch": "Metropolis Downtown", "verifiedStatus": { "esiNumber": true } },
+       "gmc": { "isOptedIn": true, "selectedSpouseId": "", "selectedChildIds": [] },
+       "organization": {
+         "designation": "Content Writer",
+         "department": "Marketing",
+         "reportingManager": "Olivia Payne",
+         "organizationId": "ORG-FIN",
+         "organizationName": "ADVAITHA AKSHA",
+         "joiningDate": "2024-06-01",
+         "workType": "Full-time"
+       },
+       "uniforms": [],
+       "biometrics": {
+        "signatureImage": null,
+        "fingerprints": { "leftHand": null, "rightHand": null }
+      }
+    },
+    {
+      "id": "sub_1678886600000",
+      "status": "rejected",
+      "portalSyncStatus": null,
+      "organizationId": "ORG-LOGI",
+      "organizationName": "ADARSHA PALACE",
+      "enrollmentDate": "2024-05-20",
+      "personal": {
+        "employeeId": "PARA-003",
+        "firstName": "Michael",
+        "lastName": "Johnson",
+        "dob": "1988-11-30",
+        "gender": "Male",
+        "maritalStatus": "Married",
+        "bloodGroup": "B-",
+        "mobile": "9123456789",
+        "email": "michael.j@example.com",
+        "emergencyContactName": "Sarah Johnson",
+        "emergencyContactNumber": "9123456780",
+        "relationship": "Spouse",
+        "salary": 18000,
+        "idProofType": "Aadhaar",
+        "idProofNumber": "123456789012",
+        "verifiedStatus": { "name": true, "dob": true, "idProofNumber": false }
+      },
+      "address": { "present": { "line1": "789 Pine Lane", "city": "Star City", "state": "Texas", "country": "USA", "pincode": "75001" }, "permanent": { "line1": "789 Pine Lane", "city": "Star City", "state": "Texas", "country": "USA", "pincode": "75001" }, "sameAsPresent": true },
+      "family": [],
+      "education": [],
+      "bank": { "accountHolderName": "Michael Johnson", "accountNumber": "5555666677", "confirmAccountNumber": "5555666677", "ifscCode": "BANK0STAR01", "bankName": "Star Bank", "branchName": "Central", "verifiedStatus": { "accountHolderName": true, "accountNumber": true, "ifscCode": true } },
+      "uan": { "hasPreviousPf": true, "uanNumber": "999988887777", "verifiedStatus": { "uanNumber": false } },
+      "esi": { "hasEsi": true, "esiNumber": "3009876543", "verifiedStatus": { "esiNumber": true } },
+      "gmc": { "isOptedIn": null, "selectedSpouseId": "", "selectedChildIds": [] },
+      "organization": { "designation": "Warehouse Associate", "department": "Logistics", "reportingManager": "David Chen", "organizationId": "ORG-LOGI", "organizationName": "ADARSHA PALACE", "joiningDate": "2024-05-20", "workType": "Full-time" },
+       "uniforms": [],
+       "biometrics": {
+        "signatureImage": null,
+        "fingerprints": { "leftHand": null, "rightHand": null }
+      }
+    },
+    {
+      "id": "sub_1678886700000",
+      "status": "verified",
+      "portalSyncStatus": "pending_sync",
+      "organizationId": "ORG-FIN",
+      "organizationName": "ADVAITHA AKSHA",
+      "enrollmentDate": "2024-06-10",
+      "personal": {
+        "employeeId": "PARA-004",
+        "firstName": "Emily",
+        "lastName": "Davis",
+        "dob": "1992-04-12",
+        "gender": "Female",
+        "maritalStatus": "Single",
+        "bloodGroup": "AB+",
+        "mobile": "9988776655",
+        "email": "emily.d@example.com",
+        "emergencyContactName": "James Davis",
+        "emergencyContactNumber": "9988776650",
+        "relationship": "Father",
+        "salary": 65000
+      },
+      "address": { "present": { "line1": "321 Elm Street", "city": "Central City", "state": "California", "country": "USA", "pincode": "90210" }, "permanent": { "line1": "321 Elm Street", "city": "Central City", "state": "California", "country": "USA", "pincode": "90210" }, "sameAsPresent": true },
+      "family": [],
+      "education": [{ "id": "edu_4", "degree": "MBA Finance", "institution": "City Business School", "startYear": "2014", "endYear": "2016", "grade": "A" }],
+      "bank": { "accountHolderName": "Emily Davis", "accountNumber": "1122334455", "confirmAccountNumber": "1122334455", "ifscCode": "QFIN012345", "bankName": "Quantum Bank", "branchName": "HQ" },
+      "uan": { "hasPreviousPf": true, "uanNumber": "100234567890", "pfNumber": "CA/54321/9876" },
+      "esi": { "hasEsi": false },
+      "gmc": { "isOptedIn": true, "selectedSpouseId": "", "selectedChildIds": [] },
+      "organization": { "designation": "Financial Analyst", "department": "Finance", "reportingManager": "Laura Hill", "organizationId": "ORG-FIN", "organizationName": "ADVAITHA AKSHA", "joiningDate": "2024-06-10", "workType": "Full-time" },
+       "uniforms": [],
+       "biometrics": {
+        "signatureImage": null,
+        "fingerprints": { "leftHand": null, "rightHand": null }
+      }
+    },
+    {
+        "id": "sub_1678886800000",
+        "status": "pending",
+        "portalSyncStatus": null,
+        "organizationId": "ORG-RETAIL",
+        "organizationName": "AHAD EUPHORIA",
+        "enrollmentDate": "2024-06-12",
+        "personal": { "employeeId": "PARA-005", "firstName": "David", "lastName": "Wilson", "dob": "1998-02-18", "gender": "Male", "maritalStatus": "Single", "bloodGroup": "O-", "mobile": "9876501234", "email": "david.w@example.com", "emergencyContactName": "Mary Wilson", "emergencyContactNumber": "9876501235", "relationship": "Mother", "salary": 20000 },
+        "address": { "present": { "line1": "555 Cedar Blvd", "city": "Springfield", "state": "Illinois", "country": "USA", "pincode": "62704" }, "permanent": { "line1": "555 Cedar Blvd", "city": "Springfield", "state": "Illinois", "country": "USA", "pincode": "62704" }, "sameAsPresent": true },
+        "family": [],
+        "education": [],
+        "bank": { "accountHolderName": "David Wilson", "accountNumber": "9876543210", "confirmAccountNumber": "9876543210", "ifscCode": "FNBO012345", "bankName": "First National Bank", "branchName": "Springfield West" },
+        "uan": { "hasPreviousPf": false },
+        "esi": { "hasEsi": true, "esiNumber": "4001234567" },
+        "gmc": { 
+            "isOptedIn": false,
+            "declarationAccepted": true,
+            "alternateInsuranceProvider": "Star Health",
+            "alternateInsuranceStartDate": "2024-01-01",
+            "alternateInsuranceEndDate": "2024-12-31",
+            "alternateInsuranceCoverage": "5 Lakhs Family Floater",
+            "selectedSpouseId": "", 
+            "selectedChildIds": []
+        },
+        "organization": { "designation": "Data Entry Operator", "department": "Operations", "reportingManager": "Samuel Crisp", "organizationId": "ORG-RETAIL", "organizationName": "AHAD EUPHORIA", "joiningDate": "2024-06-12", "workType": "Contract" },
+         "uniforms": [],
+         "biometrics": {
+          "signatureImage": null,
+          "fingerprints": { "leftHand": null, "rightHand": null }
+        }
+    },
+    {
+        "id": "sub_1678886900000",
+        "status": "verified",
+        "portalSyncStatus": "failed",
+        "organizationId": "ORG-ISKCON",
+        "organizationName": "AKSHAYA PATRA - ISKCON",
+        "enrollmentDate": "2024-04-30",
+        "personal": { "employeeId": "PARA-006", "firstName": "Jessica", "lastName": "Miller", "dob": "1993-07-25", "gender": "Female", "maritalStatus": "Married", "bloodGroup": "A-", "mobile": "9112233445", "email": "jessica.m@example.com", "emergencyContactName": "Chris Miller", "emergencyContactNumber": "9112233446", "relationship": "Spouse", "salary": 75000 },
+        "address": { "present": { "line1": "101 River Road", "city": "Metropolis", "state": "New York", "country": "USA", "pincode": "10001" }, "permanent": { "line1": "101 River Road", "city": "Metropolis", "state": "New York", "country": "USA", "pincode": "10001" }, "sameAsPresent": true },
+        "family": [{ "id": "fam_6", "relation": "Spouse", "name": "Chris Miller", "dob": "1991-03-10", "occupation": "Architect", "dependent": false }],
+        "education": [{ "id": "edu_6", "degree": "B.A. Communications", "institution": "Metro University", "startYear": "2011", "endYear": "2015", "grade": "B+" }],
+        "bank": { "accountHolderName": "Jessica Miller", "accountNumber": "2233445566", "confirmAccountNumber": "2233445566", "ifscCode": "WXYZ0987654", "bankName": "Metropolis Bank", "branchName": "Uptown" },
+        "uan": { "hasPreviousPf": true, "uanNumber": "100345678901", "pfNumber": "NY/65432/1098" },
+        "esi": { "hasEsi": false },
+        "gmc": { "isOptedIn": true, "selectedSpouseId": "fam_6", "selectedChildIds": [] },
+        "organization": { "designation": "Marketing Manager", "department": "Marketing", "reportingManager": "Olivia Payne", "organizationId": "ORG-ISKCON", "organizationName": "AKSHAYA PATRA - ISKCON", "joiningDate": "2024-04-30", "workType": "Full-time" },
+         "uniforms": [],
+         "biometrics": {
+          "signatureImage": null,
+          "fingerprints": { "leftHand": null, "rightHand": null }
+        }
+    }
+  ],
+  "salaryChangeRequests": []
+}

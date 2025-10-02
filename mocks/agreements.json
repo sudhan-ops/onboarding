@@ -1,0 +1,20 @@
+
+[
+  {
+    "id": "agr_1",
+    "name": "AISSHWARYA EXCELLENCY Maintenance Contract",
+    "fromDate": "2023-01-01",
+    "toDate": "2025-12-31",
+    "renewalIntervalDays": 30,
+    "agreementDate": "2022-12-15",
+    "addendum1Date": "2023-06-01"
+  },
+  {
+    "id": "agr_2",
+    "name": "Trans Indus Security Services Agreement",
+    "fromDate": "2024-03-01",
+    "toDate": "2026-02-28",
+    "renewalIntervalDays": 60,
+    "agreementDate": "2024-02-20"
+  }
+]

@@ -1,0 +1,14 @@
+
+{
+  "events": [
+    { "id": "evt_1", "userId": "user_5", "timestamp": "2024-07-22T03:31:00.000Z", "type": "check-in" },
+    { "id": "evt_2", "userId": "user_5", "timestamp": "2024-07-22T12:00:00.000Z", "type": "check-out" },
+    { "id": "evt_3", "userId": "user_5", "timestamp": "2024-07-23T03:45:00.000Z", "type": "check-in" },
+    { "id": "evt_4", "userId": "user_5", "timestamp": "2024-07-23T07:35:00.000Z", "type": "check-out" },
+    { "id": "evt_5", "userId": "user_6", "timestamp": "2024-07-22T03:25:00.000Z", "type": "check-in" },
+    { "id": "evt_6", "userId": "user_6", "timestamp": "2024-07-22T12:35:00.000Z", "type": "check-out" },
+    { "id": "evt_7", "userId": "user_4", "timestamp": "2024-07-22T04:00:00.000Z", "type": "check-in" },
+    { "id": "evt_8", "userId": "user_4", "timestamp": "2024-07-22T13:05:00.000Z", "type": "check-out" },
+    { "id": "evt_9", "userId": "user_4", "timestamp": "2024-07-24T03:50:00.000Z", "type": "check-in" }
+  ]
+}

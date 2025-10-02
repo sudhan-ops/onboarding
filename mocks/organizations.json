@@ -1,0 +1,143 @@
+
+[
+  {
+    "id": "SITE-SHRIRAM",
+    "shortName": "SHRIRAM SMRITHI",
+    "fullName": "SHRIRAM SMRITHI",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 97
+  },
+  {
+    "id": "SITE-MAHENDRA",
+    "shortName": "MAHENDRA AARNA",
+    "fullName": "MAHENDRA AARNA",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 45.3
+  },
+  {
+    "id": "SITE-TATA",
+    "shortName": "TATA SHERWOOD",
+    "fullName": "TATA SHERWOOD",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 37
+  },
+  {
+    "id": "SITE-NIKOO",
+    "shortName": "NIKOO HOMES",
+    "fullName": "NIKOO HOMES",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 176
+  },
+  {
+    "id": "SITE-BRIGADE",
+    "shortName": "BRIGADE BRICKLANE",
+    "fullName": "BRIGADE BRICKLANE",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 48
+  },
+  {
+    "id": "SITE-MAHINDRA-WIND",
+    "shortName": "MAHINDRA WINDCHIMES",
+    "fullName": "MAHINDRA WINDCHIMES",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 60
+  },
+  {
+    "id": "SITE-PROMONT",
+    "shortName": "THE PROMONT",
+    "fullName": "THE PROMONT",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 48.5
+  },
+  {
+    "id": "SITE-UBER",
+    "shortName": "UBER VERDANT PHASE 2",
+    "fullName": "UBER VERDANT PHASE 2",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 64
+  },
+  {
+    "id": "ORG-LOGI",
+    "shortName": "ADARSHA PALACE",
+    "fullName": "ADARSHA PALACE",
+    "address": "Hyderabad",
+    "manpowerApprovedCount": 30
+  },
+  {
+    "id": "ORG-FIN",
+    "shortName": "ADVAITHA AKSHA",
+    "fullName": "ADVAITHA AKSHA",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 12
+  },
+  {
+    "id": "ORG-RETAIL",
+    "shortName": "AHAD EUPHORIA",
+    "fullName": "AHAD EUPHORIA",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 8
+  },
+  {
+    "id": "ORG-ISKCON",
+    "shortName": "AKSHAYA PATRA - ISKCON",
+    "fullName": "AKSHAYA PATRA - ISKCON",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 50
+  },
+  {
+    "id": "ORG-ALANO",
+    "shortName": "ALANOVILLE- HARYAN & GOYAL CO",
+    "fullName": "ALANOVILLE- HARYAN & GOYAL CO",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 22
+  },
+  {
+    "id": "ORG-AERIS",
+    "shortName": "ARATT AERIS",
+    "fullName": "ARATT AERIS",
+    "address": "Hyderabad",
+    "manpowerApprovedCount": 18
+  },
+  {
+    "id": "ORG-MILANO",
+    "shortName": "ARATT MILANO",
+    "fullName": "ARATT MILANO",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 14
+  },
+  {
+    "id": "SITE-42MARK",
+    "shortName": "42 MARK ONE VILLA",
+    "fullName": "42 MARK ONE VILLA",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 10
+  },
+  {
+    "id": "SITE-AISSHWARYA",
+    "shortName": "AISSHWARYA EXCELLENCY",
+    "fullName": "AISSHWARYA EXCELLENCY APARTMENT OWNERS ASSOCIATION",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 20
+  },
+  {
+    "id": "SITE-JAINHEIGHTS",
+    "shortName": "JAIN HEIGHTS",
+    "fullName": "JAIN HEIGHTS EAST PARADE BUYERS WELFARE ASSOCIATION",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 15
+  },
+  {
+    "id": "SITE-TRANSINDUS",
+    "shortName": "TRANS INDUS",
+    "fullName": "Trans Indus Residents Association",
+    "address": "Hyderabad",
+    "manpowerApprovedCount": 25
+  },
+  {
+    "id": "SITE-URBANGREENS",
+    "shortName": "URBAN GREENS",
+    "fullName": "URBAN GREENS VILLA OWNERS WELFARE ASSOCIATION",
+    "address": "Bangalore",
+    "manpowerApprovedCount": 18
+  }
+]

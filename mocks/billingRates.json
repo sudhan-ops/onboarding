@@ -1,0 +1,10 @@
+{
+    "Facility Manager": { "ratePerDay": 1806.45, "ratePerMonth": 56000.00 },
+    "HK Boys": { "ratePerDay": 529.61, "ratePerMonth": 16418.00 },
+    "HK Ladies (Includes Reliever)": { "ratePerDay": 529.61, "ratePerMonth": 16418.00 },
+    "Gardeners": { "ratePerDay": 603.48, "ratePerMonth": 18708.00 },
+    "Lead Electrician": { "ratePerDay": 781.48, "ratePerMonth": 24226.00 },
+    "Plumber + Pool Operator": { "ratePerDay": 948.06, "ratePerMonth": 29390.00 },
+    "Multi Technician": { "ratePerDay": 881.42, "ratePerMonth": 27324.00 },
+    "FM Earned Leave Available Balance": { "ratePerDay": 0, "ratePerMonth": 0 }
+}

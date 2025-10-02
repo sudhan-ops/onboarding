@@ -1,0 +1,209 @@
+
+{
+  "groups": [
+    {
+      "id": "group_1",
+      "name": "AP Groups",
+      "locations": ["Bangalore", "Hyderabad"],
+      "companies": [
+        {
+          "id": "comp_1",
+          "name": "Paradigm Integrated Facility Services Pvt Ltd",
+          "entities": [
+            {
+              "id": "ent_1_1",
+              "name": "42 MARK ONE VILLA",
+              "organizationId": "SITE-42MARK"
+            },
+            {
+              "id": "ent_1_2",
+              "name": "ADARSHA PALACE",
+              "organizationId": "ORG-LOGI"
+            }
+          ]
+        },
+        {
+          "id": "comp_2",
+          "name": "Paradigm Property and Facility Management Services",
+          "entities": [
+            {
+              "id": "ent_2_1",
+              "name": "AISSHWARYA EXCELLENCY APARTMENT OWNERS ASSOCIATION",
+              "organizationId": "SITE-AISSHWARYA",
+              "location": "Bangalore",
+              "registrationType": "Society",
+              "registrationNumber": "SOC-AE-12345",
+              "panNumber": "BLRAA1234E",
+              "gstNumber": "29BLRAA1234E1Z5",
+              "policyIds": ["pol_1", "pol_2"],
+              "insuranceIds": ["ins_1", "ins_2"]
+            },
+            {
+              "id": "ent_2_2",
+              "name": "JAIN HEIGHTS EAST PARADE BUYERS WELFARE ASSOCIATION",
+              "organizationId": "SITE-JAINHEIGHTS"
+            }
+          ]
+        },
+        {
+          "id": "comp_3",
+          "name": "Southwall Security LLP",
+          "entities": [
+            {
+              "id": "ent_3_1",
+              "name": "Trans Indus Residents Association",
+              "organizationId": "SITE-TRANSINDUS",
+              "location": "Hyderabad",
+              "registrationType": "Society",
+              "registrationNumber": "SOC-TI-67890",
+              "panNumber": "HYDTI6789T",
+              "policyIds": ["pol_1"],
+              "insuranceIds": ["ins_3"]
+            },
+            {
+              "id": "ent_3_2",
+              "name": "URBAN GREENS VILLA OWNERS WELFARE ASSOCIATION",
+              "organizationId": "SITE-URBANGREENS"
+            },
+            {
+              "id": "ent_3_3",
+              "name": "ISKCON GROUPS",
+              "organizationId": "ORG-ISKCON"
+            }
+          ]
+        },
+         {
+          "id": "comp_4",
+          "name": "AP enterprises",
+          "entities": []
+        },
+        {
+          "id": "comp_5",
+          "name": "AP Manpower",
+          "entities": []
+        }
+      ]
+    }
+  ],
+  "siteConfigurations": [
+    {
+      "organizationId": "SITE-AISSHWARYA",
+      "billingName": "AISSHWARYA EXCELLENCY",
+      "keyAccountManager": "Samuel Crisp",
+      "projectType": "Apartment",
+      "entityId": "ent_2_1",
+      "agreementDetails": {
+        "fromDate": "2023-01-01",
+        "toDate": "2025-12-31",
+        "renewalIntervalDays": 30,
+        "agreementDate": "2022-12-15"
+      },
+      "siteOperations": {
+        "form6Applicable": true,
+        "form6ValidityFrom": "2024-01-01",
+        "form6ValidityTo": "2024-12-31",
+        "form6Document": null,
+        "minWageRevisionApplicable": true,
+        "minWageRevisionValidityFrom": "2024-04-01",
+        "minWageRevisionValidityTo": "2025-03-31",
+        "minWageRevisionDocument": null,
+        "uniformDeductions": true
+      },
+      "insuranceStatus": {
+        "isCompliant": false,
+        "gpa": { "policyNumber": "GPA-PPFMS-001", "provider": "Provider A", "validFrom": "2024-01-01", "validTo": "2024-12-31" },
+        "gmcGhi": { "policyNumber": "GMC-PPFMS-001", "provider": "Provider B", "validFrom": "2024-01-01", "validTo": "2024-12-31" }
+      }
+    },
+    {
+      "organizationId": "SITE-42MARK",
+      "billingName": "42 MARK ONE VILLA",
+      "keyAccountManager": "Laura Hill",
+      "projectType": "Villa",
+      "entityId": "ent_1_1",
+      "insuranceStatus": {
+        "isCompliant": true,
+        "gpa": { "policyNumber": "GPA-PIFS-001", "provider": "Provider C", "validFrom": "2024-01-01", "validTo": "2024-12-31" },
+        "gmcGhi": { "policyNumber": "GMC-PIFS-001", "provider": "Provider D", "validFrom": "2024-01-01", "validTo": "2024-12-31" },
+        "gtl": { "policyNumber": "GTL-PIFS-001", "provider": "Provider E", "validFrom": "2024-01-01", "validTo": "2024-12-31" },
+        "wc": { "policyNumber": "WC-PIFS-001", "provider": "Provider F", "validFrom": "2024-01-01", "validTo": "2024-12-31" }
+      }
+    },
+    {
+      "organizationId": "ORG-LOGI",
+      "billingName": "ADARSHA PALACE",
+      "keyAccountManager": "David Chen",
+      "projectType": "Apartment",
+      "entityId": "ent_1_2",
+       "insuranceStatus": {
+        "isCompliant": true,
+        "gpa": { "policyNumber": "", "provider": "", "validFrom": "", "validTo": "" },
+        "gmcGhi": { "policyNumber": "", "provider": "", "validFrom": "", "validTo": "" },
+        "gtl": { "policyNumber": "", "provider": "", "validFrom": "", "validTo": "" },
+        "wc": { "policyNumber": "", "provider": "", "validFrom": "", "validTo": "" }
+      }
+    },
+    {
+      "organizationId": "ORG-RETAIL",
+      "billingName": "AHAD EUPHORIA",
+      "keyAccountManager": "John Doe",
+      "projectType": "Commercial Retail",
+       "insuranceStatus": {
+        "isCompliant": true,
+        "gpa": { "policyNumber": "", "provider": "", "validFrom": "", "validTo": "" },
+        "gmcGhi": { "policyNumber": "", "provider": "", "validFrom": "", "validTo": "" },
+        "gtl": { "policyNumber": "", "provider": "", "validFrom": "", "validTo": "" },
+        "wc": { "policyNumber": "", "provider": "", "validFrom": "", "validTo": "" }
+      }
+    }
+  ],
+  "backOfficeIdSeries": [
+      {"id": "b_1", "department": "Operation Team", "designation": "Head Operations", "permanentId": "BO-MS-01", "temporaryId": "T-BO-MS-01"},
+      {"id": "b_2", "department": "Operation Team", "designation": "Manager - Business Development", "permanentId": "BO-MS-02", "temporaryId": "T-BO-MS-02"},
+      {"id": "b_3", "department": "Operation Team", "designation": "Assistant Manager - Business Development", "permanentId": "BO-MS-03", "temporaryId": "T-BO-MS-03"},
+      {"id": "b_4", "department": "Operation Team", "designation": "Manager Operations", "permanentId": "BO-MS-04", "temporaryId": "T-BO-MS-04"},
+      {"id": "b_5", "department": "Operation Team", "designation": "Manager Operation - Technical", "permanentId": "BO-MS-05", "temporaryId": "T-BO-MS-05"},
+      {"id": "b_6", "department": "Operation Team", "designation": "Manager Operation - Soft Services", "permanentId": "BO-MS-06", "temporaryId": "T-BO-MS-06"},
+      {"id": "b_7", "department": "Operation Team", "designation": "Manager Operation - Training & Development", "permanentId": "BO-MS-07", "temporaryId": "T-BO-MS-07"},
+      {"id": "b_8", "department": "Operation Team", "designation": "Manager Operation - Audit & Transition", "permanentId": "BO-MS-08", "temporaryId": "T-BO-MS-08"},
+      {"id": "b_9", "department": "Operation Team", "designation": "Assistant Manager Operation", "permanentId": "BO-MS-09", "temporaryId": "T-BO-MS-09"},
+      {"id": "b_10", "department": "Operation Team", "designation": "Assistant Manager Operation - Technical", "permanentId": "BO-MS-10", "temporaryId": "T-BO-MS-10"},
+      {"id": "b_11", "department": "Operation Team", "designation": "Assistant Manager Operation - Soft Services", "permanentId": "BO-MS-11", "temporaryId": "T-BO-MS-11"},
+      {"id": "b_12", "department": "Operation Team", "designation": "Assistant Manager Operation - Training & Development", "permanentId": "BO-MS-12", "temporaryId": "T-BO-MS-12"},
+      {"id": "b_13", "department": "Operation Team", "designation": "Assistant Manager Operation - Audit & Transition", "permanentId": "BO-MS-13", "temporaryId": "T-BO-MS-13"},
+      {"id": "b_14", "department": "Operation Team", "designation": "Horticulturist", "permanentId": "BO-MS-14", "temporaryId": "T-BO-MS-14"},
+      {"id": "b_15", "department": "Operation Team", "designation": "House Keeping Executive", "permanentId": "BO-MS-15", "temporaryId": "T-BO-MS-15"},
+      {"id": "b_16", "department": "Operation Team", "designation": "Technical Executive", "permanentId": "BO-MS-16", "temporaryId": "T-BO-MS-16"},
+      {"id": "b_17", "department": "Operation Team", "designation": "STP Executive", "permanentId": "BO-MS-17", "temporaryId": "T-BO-MS-17"},
+      {"id": "b_18", "department": "Operation Team", "designation": "Assistant Field Officer", "permanentId": "BO-MS-18", "temporaryId": "T-BO-MS-18"},
+      {"id": "b_19", "department": "Operation Team", "designation": "Field Officer", "permanentId": "BO-MS-19", "temporaryId": "T-BO-MS-19"},
+      {"id": "b_20", "department": "Operation Team", "designation": "Field Executive", "permanentId": "BO-MS-20", "temporaryId": "T-BO-MS-20"},
+      {"id": "b_21", "department": "HR Department", "designation": "HR Head", "permanentId": "BO-MS-21", "temporaryId": "T-BO-MS-21"},
+      {"id": "b_22", "department": "HR Department", "designation": "HR Manager", "permanentId": "BO-MS-22", "temporaryId": "T-BO-MS-22"},
+      {"id": "b_23", "department": "HR Department", "designation": "HR Manager - Audit and Compliance", "permanentId": "BO-MS-23", "temporaryId": "T-BO-MS-23"},
+      {"id": "b_24", "department": "HR Department", "designation": "HR Manager - Recruitment, Training and Development", "permanentId": "BO-MS-24", "temporaryId": "T-BO-MS-24"},
+      {"id": "b_25", "department": "HR Department", "designation": "Assistant HR Manager", "permanentId": "BO-MS-25", "temporaryId": "T-BO-MS-25"},
+      {"id": "b_26", "department": "HR Department", "designation": "HR Executive", "permanentId": "BO-MS-26", "temporaryId": "T-BO-MS-26"},
+      {"id": "b_27", "department": "HR Department", "designation": "Senior HR Executive", "permanentId": "BO-MS-27", "temporaryId": "T-BO-MS-27"},
+      {"id": "b_28", "department": "HR Department", "designation": "Junior HR Executive", "permanentId": "BO-MS-28", "temporaryId": "T-BO-MS-28"},
+      {"id": "b_29", "department": "Accounts & Finance Department", "designation": "Finance Head", "permanentId": "BO-MS-29", "temporaryId": "T-BO-MS-29"},
+      {"id": "b_30", "department": "Accounts & Finance Department", "designation": "Accounts Manager", "permanentId": "BO-MS-30", "temporaryId": "T-BO-MS-30"},
+      {"id": "b_31", "department": "Accounts & Finance Department", "designation": "Finance Manager", "permanentId": "BO-MS-31", "temporaryId": "T-BO-MS-31"},
+      {"id": "b_32", "department": "Accounts & Finance Department", "designation": "Assistant Accounts Manager", "permanentId": "BO-MS-32", "temporaryId": "T-BO-MS-32"},
+      {"id": "b_33", "department": "Accounts & Finance Department", "designation": "Assistant Finance Manager", "permanentId": "BO-MS-33", "temporaryId": "T-BO-MS-33"},
+      {"id": "b_34", "department": "Accounts & Finance Department", "designation": "Assistant Accounts Executive", "permanentId": "BO-MS-34", "temporaryId": "T-BO-MS-34"},
+      {"id": "b_35", "department": "Accounts & Finance Department", "designation": "Assistant Finance Executive", "permanentId": "BO-MS-35", "temporaryId": "T-BO-MS-35"},
+      {"id": "b_36", "department": "Accounts & Finance Department", "designation": "Accounts Executive", "permanentId": "BO-MS-36", "temporaryId": "T-BO-MS-36"},
+      {"id": "b_37", "department": "Accounts & Finance Department", "designation": "Finance Executive", "permanentId": "BO-MS-37", "temporaryId": "T-BO-MS-37"},
+      {"id": "b_38", "department": "Accounts & Finance Department", "designation": "Senior Accounts Executive", "permanentId": "BO-MS-38", "temporaryId": "T-BO-MS-38"},
+      {"id": "b_39", "department": "Accounts & Finance Department", "designation": "Junior Accounts Executive", "permanentId": "BO-MS-39", "temporaryId": "T-BO-MS-39"},
+      {"id": "b_40", "department": "Admin Department", "designation": "Procurement Manager", "permanentId": "BO-MS-40", "temporaryId": "T-BO-MS-40"},
+      {"id": "b_41", "department": "Admin Department", "designation": "Assistant Procurement Manager", "permanentId": "BO-MS-41", "temporaryId": "T-BO-MS-41"},
+      {"id": "b_42", "department": "Admin Department", "designation": "Admin Manager", "permanentId": "BO-MS-42", "temporaryId": "T-BO-MS-42"},
+      {"id": "b_43", "department": "Admin Department", "designation": "Admin Assistant", "permanentId": "BO-MS-43", "temporaryId": "T-BO-MS-43"},
+      {"id": "b_44", "department": "Admin Department", "designation": "Admin Executive", "permanentId": "BO-MS-44", "temporaryId": "T-BO-MS-44"},
+      {"id": "b_45", "department": "Others", "designation": "Driver", "permanentId": "BO-MS-45", "temporaryId": "T-BO-MS-45"},
+      {"id": "b_46", "department": "Others", "designation": "Office Assistant", "permanentId": "BO-MS-46", "temporaryId": "T-BO-MS-46"},
+      {"id": "b_47", "department": "Others", "designation": "Office Boy", "permanentId": "BO-MS-47", "temporaryId": "T-BO-MS-47"}
+    ]
+}

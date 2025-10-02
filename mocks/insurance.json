@@ -1,0 +1,24 @@
+
+[
+  {
+    "id": "ins_1",
+    "type": "GMC",
+    "provider": "United Health",
+    "policyNumber": "UHC-12345",
+    "validTill": "2025-12-31"
+  },
+  {
+    "id": "ins_2",
+    "type": "GPA",
+    "provider": "Bajaj Allianz",
+    "policyNumber": "BA-67890",
+    "validTill": "2025-12-31"
+  },
+  {
+    "id": "ins_3",
+    "type": "WCA",
+    "provider": "LIC",
+    "policyNumber": "LIC-WCA-1122",
+    "validTill": "2025-12-31"
+  }
+]

@@ -1,0 +1,13 @@
+
+{
+  "400001": { "city": "Mumbai", "state": "Maharashtra" },
+  "400072": { "city": "Mumbai", "state": "Maharashtra" },
+  "110001": { "city": "New Delhi", "state": "Delhi" },
+  "110006": { "city": "Delhi", "state": "Delhi" },
+  "700001": { "city": "Kolkata", "state": "West Bengal" },
+  "700016": { "city": "Kolkata", "state": "West Bengal" },
+  "600001": { "city": "Chennai", "state": "Tamil Nadu" },
+  "600002": { "city": "Chennai", "state": "Tamil Nadu" },
+  "560001": { "city": "Bengaluru", "state": "Karnataka" },
+  "500001": { "city": "Hyderabad", "state": "Telangana" }
+}

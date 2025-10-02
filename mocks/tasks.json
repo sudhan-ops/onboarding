@@ -1,0 +1,72 @@
+
+{
+  "tasks": [
+    {
+      "id": "task_1",
+      "name": "Review Q3 Financial Reports",
+      "description": "Go through the quarterly financial statements and prepare a summary for the leadership meeting.",
+      "dueDate": "2024-09-30",
+      "priority": "High",
+      "status": "In Progress",
+      "createdAt": "2024-09-01T10:00:00.000Z",
+      "assignedToId": "user_3",
+      "assignedToName": "Olivia Payne",
+      "escalationStatus": "None"
+    },
+    {
+      "id": "task_2",
+      "name": "Plan Annual Company Offsite",
+      "description": "Coordinate with vendors, finalize the location, and plan the agenda for the annual offsite event.",
+      "dueDate": "2024-10-15",
+      "priority": "Medium",
+      "status": "To Do",
+      "createdAt": "2024-09-05T11:30:00.000Z",
+      "assignedToId": "user_10",
+      "assignedToName": "Harriet Reed",
+      "escalationStatus": "None"
+    },
+    {
+      "id": "task_3",
+      "name": "Update Employee Handbook",
+      "description": "Incorporate the new WFH policy and update the benefits section.",
+      "dueDate": "2024-09-20",
+      "priority": "Low",
+      "status": "Done",
+      "createdAt": "2024-08-28T14:00:00.000Z",
+      "assignedToId": "user_10",
+      "assignedToName": "Harriet Reed",
+      "completionNotes": "Handbook updated with the latest policies and sent for printing.",
+      "completionPhoto": null,
+      "escalationStatus": "None"
+    },
+    {
+      "id": "task_4",
+      "name": "Site Visit - Quantum Financial",
+      "description": "Conduct the scheduled monthly site visit and submit the audit report.",
+      "priority": "High",
+      "status": "To Do",
+      "createdAt": "2024-09-10T09:00:00.000Z",
+      "assignedToId": "user_5",
+      "assignedToName": "Frank Officer",
+      "escalationStatus": "None"
+    },
+    {
+      "id": "task_5",
+      "name": "Client Follow-up - Swift Logistics",
+      "description": "Follow up with Swift Logistics regarding the pending contract renewal.",
+      "dueDate": "2024-07-20",
+      "priority": "Medium",
+      "status": "To Do",
+      "createdAt": "2024-07-12T15:00:00.000Z",
+      "assignedToId": "user_3",
+      "assignedToName": "Olivia Payne",
+      "escalationStatus": "None",
+      "escalationLevel1UserId": "user_1",
+      "escalationLevel1DurationDays": 5,
+      "escalationLevel2UserId": "user_10",
+      "escalationLevel2DurationDays": 5,
+      "escalationEmail": "ceo@paradigm.com",
+      "escalationEmailDurationDays": 2
+    }
+  ]
+}

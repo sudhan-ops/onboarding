@@ -1,0 +1,23 @@
+
+{
+  "notifications": [
+    {
+      "id": "notif_1",
+      "userId": "user_3",
+      "message": "Task \"Client Follow-up - Swift Logistics\" assigned to you is overdue.",
+      "type": "task_escalated",
+      "isRead": true,
+      "createdAt": "2024-09-26T10:00:00.000Z",
+      "linkTo": "/tasks"
+    },
+    {
+      "id": "notif_2",
+      "userId": "user_10",
+      "message": "You have been assigned a new task: \"Plan Annual Company Offsite\"",
+      "type": "task_assigned",
+      "isRead": false,
+      "createdAt": "2024-09-28T11:30:00.000Z",
+      "linkTo": "/tasks"
+    }
+  ]
+}

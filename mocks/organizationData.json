@@ -1,0 +1,59 @@
+
+[
+  {
+    "id": "org_1",
+    "name": "North Ridge",
+    "departments": [
+      {
+        "name": "Technology",
+        "managers": ["Devon Loper", "Alice Johnson"]
+      },
+      {
+        "name": "Site Operations",
+        "managers": ["Samuel Crisp", "Robert Brown"]
+      }
+    ]
+  },
+  {
+    "id": "org_2",
+    "name": "South Gate",
+    "departments": [
+      {
+        "name": "Marketing",
+        "managers": ["Emily White", "Marketing Head"]
+      },
+      {
+        "name": "Sales",
+        "managers": ["Michael Green", "Sales Head"]
+      }
+    ]
+  },
+  {
+    "id": "org_3",
+    "name": "Eastwood Park",
+    "departments": [
+      {
+        "name": "Human Resources",
+        "managers": ["Jessica Davis", "HR Head"]
+      },
+      {
+        "name": "Finance",
+        "managers": ["William Taylor", "Finance Head"]
+      }
+    ]
+  },
+  {
+    "id": "org_4",
+    "name": "Westfield",
+    "departments": [
+        {
+            "name": "Logistics",
+            "managers": ["Daniel Martinez", "Logistics Head"]
+        },
+        {
+            "name": "Customer Support",
+            "managers": ["Sophia Anderson", "Support Head"]
+        }
+    ]
+  }
+]

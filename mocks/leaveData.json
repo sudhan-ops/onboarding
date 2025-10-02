@@ -1,0 +1,37 @@
+
+{
+  "balances": [
+    { "userId": "user_1", "earnedTotal": 5, "earnedUsed": 0, "sickTotal": 12, "sickUsed": 0, "floatingTotal": 1, "floatingUsed": 0 },
+    { "userId": "user_10", "earnedTotal": 5, "earnedUsed": 0, "sickTotal": 12, "sickUsed": 0, "floatingTotal": 1, "floatingUsed": 0 },
+    { "userId": "user_2", "earnedTotal": 5, "earnedUsed": 0, "sickTotal": 12, "sickUsed": 0, "floatingTotal": 0, "floatingUsed": 0 },
+    { "userId": "user_3", "earnedTotal": 5, "earnedUsed": 0, "sickTotal": 12, "sickUsed": 0, "floatingTotal": 1, "floatingUsed": 0 },
+    { "userId": "user_4", "earnedTotal": 5, "earnedUsed": 1, "sickTotal": 12, "sickUsed": 2, "floatingTotal": 0, "floatingUsed": 0 },
+    { "userId": "user_5", "earnedTotal": 5, "earnedUsed": 0, "sickTotal": 12, "sickUsed": 5, "floatingTotal": 1, "floatingUsed": 0 },
+    { "userId": "user_6", "earnedTotal": 5, "earnedUsed": 1, "sickTotal": 12, "sickUsed": 0, "floatingTotal": 1, "floatingUsed": 0 },
+    { "userId": "user_7", "earnedTotal": 5, "earnedUsed": 0, "sickTotal": 12, "sickUsed": 0, "floatingTotal": 0, "floatingUsed": 0 },
+    { "userId": "user_8", "earnedTotal": 5, "earnedUsed": 0, "sickTotal": 12, "sickUsed": 0, "floatingTotal": 0, "floatingUsed": 0 },
+    { "userId": "user_9", "earnedTotal": 5, "earnedUsed": 0, "sickTotal": 12, "sickUsed": 0, "floatingTotal": 1, "floatingUsed": 0 }
+  ],
+  "requests": [
+    {
+      "id": "leave_1", "userId": "user_5", "userName": "Frank Officer", "leaveType": "Sick", "startDate": "2024-07-15", "endDate": "2024-07-16", "reason": "Family function.", "status": "approved", "currentApproverId": null, "approvalHistory": []
+    },
+    {
+      "id": "leave_2", "userId": "user_4", "userName": "Samuel Crisp", "leaveType": "Earned", "startDate": "2024-07-18", "endDate": "2024-07-18", "reason": "Medical emergency.", "status": "approved", "dayOption": "full", "currentApproverId": null, "approvalHistory": []
+    },
+    {
+      "id": "leave_3", "userId": "user_5", "userName": "Frank Officer", "leaveType": "Floating", "startDate": "2024-07-25", "endDate": "2024-07-25", "reason": "Personal work.", "status": "pending_manager_approval", "currentApproverId": "user_3", "approvalHistory": []
+    },
+    {
+      "id": "leave_4", "userId": "user_6", "userName": "Grace Field", "leaveType": "Sick", "startDate": "2024-08-01", "endDate": "2024-08-02", "reason": "Vacation.", "status": "pending_manager_approval", "currentApproverId": "user_3", "approvalHistory": []
+    },
+    {
+      "id": "leave_5", "userId": "user_4", "userName": "Samuel Crisp", "leaveType": "Earned", "startDate": "2024-06-20", "endDate": "2024-06-20", "reason": "Bank work.", "status": "rejected", "currentApproverId": null, "approvalHistory": []
+    },
+    {
+       "id": "leave_6", "userId": "user_3", "userName": "Olivia Payne", "leaveType": "Earned", "startDate": "2024-08-05", "endDate": "2024-08-05", "reason": "Conference.", "status": "pending_hr_confirmation", "currentApproverId": "user_10", "approvalHistory": [
+        { "approverId": "user_1", "approverName": "Adeline Master", "status": "approved", "timestamp": "2024-07-28T10:00:00.000Z" }
+       ]
+    }
+  ]
+}
