@@ -56,7 +56,6 @@ This app streamlines employee onboarding, document management, and integrations 
    
 Visit 👉 http://localhost:5173
 
-   
 🔐 Firebase Setup
 
 Go to Firebase Console
@@ -75,50 +74,49 @@ Copy your Firebase config into .env.local as shown above.
 
 Make sure .gitignore includes node_modules/ and .env.local.
 
-```bash
-.gitignore (recommended)
-node_modules/
-dist/
-.env.local
-.env
-.vscode/
-.DS_Store
-npm-debug.log*
-
+   ```bash
+  .gitignore (recommended)
+   node_modules/
+   dist/
+  .env.local
+  .env
+  .vscode/
+  .DS_Store
+  npm-debug.log*
 Commands to push
 
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/sudhan-ops/onboarding.git
-git branch -M main
-git push -u origin main
+  ```bash
+  git init
+  git add .
+  git commit -m "Initial commit"
+  git remote add origin https://github.com/sudhan-ops/onboarding.git
+  git branch -M main
+  git push -u origin main
 
 🛠️ Build & Deploy
-```bash
-Build for production
-npm run build
+  ```bash
+  Build for production
+  npm run build
 
 Preview locally
-```bash
-npm run preview
+  ```bash
+  npm run preview
 
 Deployment options
 
 Firebase Hosting
-```bash
-npm install -g firebase-tools
-firebase login
-firebase init hosting
-firebase deploy --only hosting
+  ```bash
+  npm install -g firebase-tools
+  firebase login
+  firebase init hosting
+  firebase deploy --only hosting
 
 
 Netlify / Vercel
 
 Connect repo
-```bash
-Build command: npm run build
+  ```bash
+  Build command: npm run build
 
 Output folder: dist
 
