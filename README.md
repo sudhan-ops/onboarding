@@ -57,12 +57,13 @@ This app streamlines employee onboarding, document management, and integrations 
 Visit 👉 http://localhost:5173
 
 5.**Firebase Setup**
-
-Go to Firebase Console
+   ```bash
+   Go to Firebase Console
 
 Authentication → Sign-in method → enable Email/Password and Google Sign-in
 
 Authentication → Authorized domains → add:
+
 
 6.**localhost**
 
